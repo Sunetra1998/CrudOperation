@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Add Property</h1>
+<div mat-dialog-content>
+    <form [formGroup]="propertyForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input formControlName="propertyName" matInput placeholder="Type Name Here">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Description</mat-label>
+            <input formControlName="description" matInput placeholder="Type Description Here">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+          <mat-label>Size</mat-label>
+            <input formControlName="size" matInput type="number" placeholder="Size">
+          </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button style="margin-left:8px;" mat-raised-button color="primary" mat-dialog-close (click)="addProperty()">{{actionBtn}}</button>
+</div>
